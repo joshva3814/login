@@ -1,0 +1,9 @@
+<div class="home-container">
+    <h1>Welcome to the Home Page!</h1>
+    <p *ngIf="isLoggedIn">Hello, {{ username }}! You are successfully logged in.</p>
+    <p *ngIf="!isLoggedIn">Please log in to access your account.</p>
+  
+    <button *ngIf="!isLoggedIn" (click)="redirectToLogin()">Login</button>
+    <button *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+  </div>
+  
